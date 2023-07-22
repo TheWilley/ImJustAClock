@@ -9,7 +9,6 @@ function Display() {
 
     const update = () => {
         const date = new Date().toJSON();
-        console.log(date);
         const currentDate = date.slice(0, 10);
         const currentTime = date.slice(11, 16);
 

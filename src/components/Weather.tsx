@@ -23,7 +23,7 @@ function Weather() {
                 .then(response => response.json())
                 .then((data: Weather) => {
                     setTemperature(data.current_weather.temperature);
-                    setIsDay(data.current_weather.is_day);
+                    //setIsDay(data.current_weather.is_day);
                 });
         }
 

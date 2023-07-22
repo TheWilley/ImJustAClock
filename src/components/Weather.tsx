@@ -9,7 +9,6 @@ type Weather = {
 
 function Weather() {
     const [temperature, setTemperature] = useState('—');
-    const [isDay, setIsDay] = useState(false);
 
     const fetchWeather = () => {
         const options = {

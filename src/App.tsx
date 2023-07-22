@@ -13,7 +13,7 @@ function App() {
       <div className='border-4 border-[${borderColor}] rounded p-5 bg-[#ebece6]' style={{ borderColor: borderColor }}>
         <Display />
       </div>
-        <input type='color' className='mt-3 hover:cursor-pointer' onChange={(e) => {
+        <input type='color' value={borderColor} className='mt-3 hover:cursor-pointer' onChange={(e) => {
           setBorderColor(e.target.value);
           localStorage.setItem('color', e.target.value);
         }} />

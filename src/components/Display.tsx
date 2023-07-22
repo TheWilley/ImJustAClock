@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Weather from './Weather';
+import moment from 'moment';
 
 function Display() {
     const [dateAndTime, setDateAndTime] = useState({
@@ -8,9 +9,9 @@ function Display() {
     });
 
     const update = () => {
-        const date = new Date().toJSON();
-        const currentDate = date.slice(0, 10);
-        const currentTime = date.slice(11, 16);
+        moment().locale();
+        const currentDate = moment().format('YYYY-MM-DD');
+        const currentTime = moment().format('HH:mm');
 
         const dateAndtime = {
             date: currentDate,
@@ -21,6 +22,7 @@ function Display() {
     };
 
     useEffect(() => {
+        update();
         const intervalId = setInterval(() => {
             update();
         }, 1000);
@@ -33,7 +35,7 @@ function Display() {
             <div className='text-8xl'>
                 {dateAndTime.time}
             </div>
-            <div className='text-3xl flex items-center justify-center'>
+            <div className='text-3xl flex items-center justify-center p-3'>
                 <div>
                     <div>
                         {dateAndTime.date}

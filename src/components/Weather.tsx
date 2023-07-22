@@ -37,7 +37,7 @@ function Weather() {
 
     useEffect(() => {
         void fetchWeather();
-    });
+    }, []);
 
     return (
         <>

@@ -12,12 +12,11 @@ function App() {
     <div className="flex flex-col items-center bg-white font-digital7">
       <div className='border-4 border-[${borderColor}] rounded p-5 bg-[#ebece6]' style={{ borderColor: borderColor }}>
         <Display />
+      </div>
         <input type='color' className='mt-3 hover:cursor-pointer' onChange={(e) => {
           setBorderColor(e.target.value);
           localStorage.setItem('color', e.target.value);
-        }
-        } />
-      </div>
+        }} />
     </div>
   );
 }

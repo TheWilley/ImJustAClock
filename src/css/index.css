@@ -22,7 +22,15 @@
   -webkit-text-size-adjust: 100%;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 #root {
+  height: fit-content;
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
